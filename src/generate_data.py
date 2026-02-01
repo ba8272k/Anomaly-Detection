@@ -47,7 +47,7 @@ for user_id in range(1, NUM_USERS + 1):
         ])
         event_id += 1
 
-df = pd.DataFrame(data, columns=[
+    df = pd.DataFrame(data, columns=[
     "event_id",
     "user_id",
     "timestamp",
@@ -57,6 +57,7 @@ df = pd.DataFrame(data, columns=[
     "device_id",
     "login_result"
 ])
+
 
 df.to_csv("data/logins.csv", index=False)
 print("Dataset generated: data/logins.csv")
