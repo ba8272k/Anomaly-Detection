@@ -30,22 +30,33 @@ for user_id in range(1, NUM_USERS + 1):
     for _ in range(LOGINS_PER_USER):
         last_time = last_time + timedelta(hours=random.randint(1, 12))
 
-      
         country = base_country
         city = base_city
-        device = base_device
+        device_id = base_device
         ip_address = random_ip()
 
         data.append([
-            event_id, user_id, last_time, ip_address, country, city, device, "success"
+            event_id,
+            user_id,
+            last_time,
+            ip_address,
+            country,
+            city,
+            device_id,
+            "success"
         ])
         event_id += 1
 
-df = pd.DataFrame(data, perfect_columns := [
-    "event_id", "user_id", "timestamp", "ip_address",
-    "country", "city", "device_id", "login_result"
+df = pd.DataFrame(data, columns=[
+    "event_id",
+    "user_id",
+    "timestamp",
+    "ip_address",
+    "country",
+    "city",
+    "device_id",
+    "login_result"
 ])
-
 
 df.to_csv("data/logins.csv", index=False)
 print("Dataset generated: data/logins.csv")
