@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# generated data files
+src/data/
+
+# trained models
+src/models/
+
+# generated plots
+src/plots/
