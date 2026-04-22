@@ -8,6 +8,13 @@ src/data/
 
 # trained models
 src/models/
+models/
+*.pkl
+*.joblib
 
 # generated plots
 src/plots/
+
+# Claude Code session files
+.claude/
+.remember/

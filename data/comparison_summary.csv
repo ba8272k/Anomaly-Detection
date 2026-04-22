@@ -1,0 +1,5 @@
+Detector,Alerts,Precision,Recall,F1-Score,ROC-AUC
+Rule-Based (baseline),607,0.201,0.726,0.315,N/A
+Isolation Forest,104,0.269,0.167,0.206,0.719
+K-Means,104,0.173,0.107,0.132,0.578
+Combined ML,150,0.22,0.196,0.208,N/A
